@@ -8,8 +8,11 @@ $config['copyright'] = 'Default Copyright';
 $config['masthead'] = 'Default MastHead';
 $config['theme'] = 'themes/bootswatch/';
 
+$config['flickrkey'] = '1e830dcdb2119be1fe75b3317ec10ea3';
+
 $config['nav1'] = array(
 	'news' => 'News',
-	'news/create' => 'Add News'
+	'news/create' => 'Add News',
+	'pics' => 'Pics',
 );
 
