@@ -15,9 +15,9 @@ class Pics extends CI_Controller {
         */
     }
 
-    public function index(/*$tags*/)
+    public function index($tags)
     {
-        $tags = 'sounders';
+        //$tags = 'sounders';
         $pics = $this->pics_model->get_pics($tags);
          
         foreach($pics as $pic){
