@@ -14,9 +14,10 @@ class Pics extends CI_Controller {
         $this->load->helper('url_helper');
         */
     }
-
+/*
     public function index($tags)
     {
+        
         //$tags = 'sounders';
         $pics = $this->pics_model->get_pics($tags);
          
@@ -29,30 +30,18 @@ class Pics extends CI_Controller {
             echo "<img title='" . $pic->title . "' src='" . $photo_url . "' />";
          
         }
+    
     }
 
-    public function view($slug = NULL)
+    */
+    
+    public function index($tags)
     {
-        /*
-        //slug without dashes
-        $dashless_slug = str_replace("-", " ", $slug);
-    
-        //uppercase slug words
-        $dashless_slug = ucwords($dashless_slug);
-    
-        //use dashless slug for the title
-        $this->config->set_item('title','News Flash - ' . $dashless_slug);
-    
-        $data['news_item'] = $this->news_model->get_news($slug);
-
-        if (empty($data['news_item']))
-        {
-                show_404();
-        }
-
-        $data['title'] = $data['news_item']['title'];
-        $this->load->view('news/view', $data);
-        */
+        //$tags = 'sounders';
+        $pics = $this->pics_model->get_pics($tags);
+        $data['title'] = 'Pics';
+        $data['pics'] = $pics;
+        $this->load->view('news/pics', $data);
     }
    
 
